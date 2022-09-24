@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/drum-machine/static/css/main.d481f7ad.css",
+    "main.js": "/drum-machine/static/js/main.d705a414.js",
+    "static/media/crash.mp3": "/drum-machine/static/media/crash.01372859a847fa0fb9a9.mp3",
+    "static/media/hihatc.mp3": "/drum-machine/static/media/hihatc.2c6fa595903c9b940cf3.mp3",
+    "static/media/hihato.mp3": "/drum-machine/static/media/hihato.2a3e9806944cfa14a817.mp3",
+    "static/media/kick.mp3": "/drum-machine/static/media/kick.934cc4b74bdff6bd42c4.mp3",
+    "static/media/ride.mp3": "/drum-machine/static/media/ride.f3dd6d6fe717491d5cda.mp3",
+    "static/media/snare.mp3": "/drum-machine/static/media/snare.9b077ca3e749b907dce3.mp3",
+    "static/media/tom1.mp3": "/drum-machine/static/media/tom1.017c5bba701d00da447a.mp3",
+    "static/media/tom2.mp3": "/drum-machine/static/media/tom2.a0c05785b36dfd2d518c.mp3",
+    "static/media/tom3.mp3": "/drum-machine/static/media/tom3.2f3e9fa8ca6ffbf10a9c.mp3",
+    "index.html": "/drum-machine/index.html",
+    "main.d481f7ad.css.map": "/drum-machine/static/css/main.d481f7ad.css.map",
+    "main.d705a414.js.map": "/drum-machine/static/js/main.d705a414.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d481f7ad.css",
+    "static/js/main.d705a414.js"
+  ]
+}
