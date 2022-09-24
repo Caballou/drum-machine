@@ -1,23 +1,81 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Pads from './components/Pads';
+import Slider from './components/Slider';
+import Pantalla from './components/Pantalla';
+import Volumen from './components/Volumen';
+import drumkit1 from './drumkit1';
+import drumkit2 from './drumkit2';
+import { useState } from 'react';
+
 
 function App() {
+
+  const [power, setPower] = useState(true);
+  const [bank, setBank] = useState('bank 1');
+  const [name, setName] = useState('')
+  const [volume, setVolume] = useState(0.5)
+
+  const powerOffOn = () => {
+    setPower(!power);
+    setName('');
+    console.log(power);
+  }
+
+  const changeBank = () => {
+    bank === 'bank 1' ? setBank('bank 2') : setBank('bank 1');
+    console.log(bank);
+  }
+
+  const printName = (val) => {
+    setName(val);
+  }
+
+  const changeVolume = (val) => {
+    setVolume(val);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <div className='contenedor-principal'>
+    
+        <div className='contenedor-botones'>
+          { bank === 'bank 1' ? 
+            drumkit1.map(drumkit => (
+              <Pads {...drumkit} power={power} name={drumkit.name} key={drumkit.key} 
+              sound={drumkit.sound} nameOnScreen={printName} volume={volume}
+              >
+                {drumkit.key}
+              </Pads>
+            )) 
+            :
+            drumkit2.map(drumkit => (
+              <Pads {...drumkit} power={power} name={drumkit.name} key={drumkit.key} 
+              sound={drumkit.sound} nameOnScreen={printName} volume={volume}
+              >
+                {drumkit.key}
+              </Pads>
+            )) 
+          }
+        </div>
+
+        <div className='contenedor-controles'>
+        
+          Power
+          <Slider type='power' powerClick={powerOffOn} active={power}/>
+          
+          <Pantalla print={name} />
+ 
+          <Volumen power={power} volume={volume} changeVolume={changeVolume} nameOnScreen={printName} />
+          
+          Bank
+          <Slider power={power} type='bank' name={bank==='bank 2' ? 'Acoustic Drum' : 'Electronic Drum'} 
+          bankClick={changeBank} active={bank} nameOnScreen={printName} />
+         
+        </div>
+
+      </div>
+          
     </div>
   );
 }

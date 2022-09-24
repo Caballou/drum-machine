@@ -1,0 +1,20 @@
+.pad {
+  -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+  font-size: 30px;
+  margin: 0 auto;
+  color: rgb(0, 0, 0);;
+}
+
+button {
+  width: 80px;
+  height: 80px;
+  border-radius: 10%;
+  background-color: #6dff6d;
+  font-weight: bold;
+  font-size: large;
+  cursor: pointer;
+}
+
+.pressed{
+  background-color: rgb(223, 144, 255);
+}
