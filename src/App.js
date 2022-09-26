@@ -60,17 +60,15 @@ function App() {
         </div>
 
         <div className='contenedor-controles'>
-        
-          Power
-          <Slider type='power' powerClick={powerOffOn} active={power}/>
+
+          <Slider type='power' powerClick={powerOffOn} active={power}>Power</Slider>
           
           <Pantalla print={name} />
  
           <Volumen power={power} volume={volume} changeVolume={changeVolume} nameOnScreen={printName} />
           
-          Bank
           <Slider power={power} type='bank' name={bank==='bank 2' ? 'Acoustic Drum' : 'Electronic Drum'} 
-          bankClick={changeBank} active={bank} nameOnScreen={printName} />
+          bankClick={changeBank} active={bank} nameOnScreen={printName}>Bank</Slider>
          
         </div>
 

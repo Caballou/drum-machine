@@ -1,3 +1,7 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 :root {
   --color-principal: rgb(177, 204, 255) ;
   --color-secundario: #000 ; 
@@ -29,7 +33,7 @@
 
 .contenedor-botones {
   margin: 0 auto;
-  width: 40%;
+  width: 50%;
   height: 300px;
   align-items: center;
   display: grid;
@@ -37,6 +41,7 @@
 }
 
 .contenedor-controles {
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,3 +49,43 @@
   width: 45%;
   height: 100%;
 }
+
+@media (max-width: 1000px){
+  .App {
+    min-width: 280px;
+  }
+  .contenedor-principal {
+    width: 70%;
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 750px) and (height > 500px){
+  .contenedor-principal {
+    height: 80vh;
+    width: 85vw;
+    display: flex;
+    flex-direction: column-reverse
+  }
+  .contenedor-botones {
+    width: 80%;
+    height: 100%;
+
+  }
+  .contenedor-controles {
+    width: 80%;
+  }
+}
+
+@media (max-height: 420px) {
+  .contenedor-principal{
+    height: 99vh;
+  }
+  .contenedor-botones {
+    height: 90%;
+    width: 40%;
+  }
+  
+}
+
+

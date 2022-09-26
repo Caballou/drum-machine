@@ -1,7 +1,7 @@
 .screen {
-  -webkit-text-stroke: 1.5px rgb(0, 0, 0);
-  font-size: 30px;
-  width: 85%;
+  -webkit-text-stroke: 1.2px rgb(0, 0, 0);
+  font-size: 25px;
+  width: 98%;
   height: 20%;
   border: 2px solid black;
   display: flex;
@@ -11,3 +11,9 @@
   background-color: rgb(255, 189, 189);
   color: rgb(255, 255, 255);
 };
+
+@media (max-width: 750px){
+  .screen {
+    min-height: 41px;
+  }
+}

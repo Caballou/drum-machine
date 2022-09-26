@@ -18,3 +18,16 @@ button {
 .pressed{
   background-color: rgb(223, 144, 255);
 }
+
+@media (max-width: 750px){
+  .pad {
+    width: 98%;
+    height: 90%;
+  }
+}
+
+@media (max-height: 400px){
+  .pad {
+    height: 90%;
+  }
+}
