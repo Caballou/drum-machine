@@ -73,7 +73,9 @@ function App() {
         </div>
 
       </div>
-          
+      <div className='firma'>
+      by Caballou 🐴
+      </div>
     </div>
   );
 }

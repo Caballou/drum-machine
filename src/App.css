@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   font-weight: bold;
   font-size: 25px;
   background: linear-gradient(rgb(137, 255, 235),rgb(238, 110, 255));
@@ -48,6 +48,12 @@
   flex-direction: column;
   width: 45%;
   height: 100%;
+}
+
+.firma {
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 @media (max-width: 1000px){
